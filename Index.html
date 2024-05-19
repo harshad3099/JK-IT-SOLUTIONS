@@ -11,13 +11,12 @@
         <h1>JK IT Solutions</h1>
     </header>
 
-    <nav>
+    <nav id="navbar">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#contact">Blogs</a></li>
         </ul>
     </nav>
 
@@ -57,10 +56,61 @@
                 </div>
             </div>
         </section>
+
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>JK IT Solutions is dedicated to providing top-notch IT services that help businesses transform and thrive in the digital era. Our team of experts specializes in web development, ERP solutions, CRM systems, digital marketing, social media management, and IT coaching. We believe in partnering with our clients to deliver customized solutions that meet their unique needs and drive success.</p>
+                <p>Our mission is to empower businesses with innovative technology and personalized support, ensuring they stay ahead in a rapidly evolving digital landscape. With years of experience and a commitment to excellence, JK IT Solutions is your trusted partner for all your IT needs.</p>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="address">
+                    <h3>Our Address</h3>
+                    <p>JK IT Solutions</p>
+                    <p>123 Business Avenue</p>
+                    <p>Suite 456</p>
+                    <p>City, State, ZIP Code</p>
+                    <p>Country</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: info@jkit.solutions</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2024 JK IT Solutions. All rights reserved.</p>
     </footer>
+
+    <script>
+        window.onscroll = function() {stickyNav()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
 </body>
 </html>
