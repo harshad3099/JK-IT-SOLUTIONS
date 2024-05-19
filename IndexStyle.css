@@ -1,14 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1px 0;
     text-align: center;
 }
 
@@ -24,6 +23,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -40,34 +40,116 @@ main {
 }
 
 .hero {
-    background-color: #e67e22;
-    color: #fff;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Index_Hero_bg.webp') no-repeat center center/cover;
+    color: #fff;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin: 0.5em 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero .button {
-    background-color: #d35400;
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
     color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
+    background-color: #007BFF;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 1em;
+}
+
+.hero .button:hover {
+    background-color: #0056b3;
 }
 
 .features {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #333;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .feature {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.feature h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature p {
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Background images for each feature */
+.feature:nth-child(1) {
+    background: url('images/Website_bg.webp') no-repeat center center/cover;
+}
+
+.feature:nth-child(2) {
+    background: url('images/ERP_BG.webp') no-repeat center center/cover;
+}
+
+.feature:nth-child(3) {
+    background: url('images/CRM_BG.webp') no-repeat center center/cover;
+}
+
+.feature:nth-child(4) {
+    background: url('images/Digital_bg.webp') no-repeat center center/cover;
+}
+
+.feature:nth-child(5) {
+    background: url('images/digi_manage_bg.webp') no-repeat center center/cover;
+}
+
+.feature:nth-child(6) {
+    background: url('images/IT_Coaching.webp') no-repeat center center/cover;
 }
 
 .faq {
@@ -96,4 +178,48 @@ footer {
     padding: 10px 0;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero .button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }
