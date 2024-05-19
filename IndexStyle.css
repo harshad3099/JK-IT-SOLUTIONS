@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* General Styles */
 body {
     margin: 0;
@@ -6,13 +10,40 @@ body {
     color: #333;
     line-height: 1.6;
 }
-
 header {
-    background-color: #333;
+    background-color: #007BFF; /* Updated background color */
     color: #fff;
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.company-info {
+    text-align: left;
+}
+
+.company-info h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.company-info .tagline {
+    margin: 0;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #e6e6e6;
 }
 
 nav {
@@ -199,7 +230,7 @@ main {
 /* About Us Section */
 .about {
     padding: 50px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/AboutUS_BG.webp') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/your-about-us-image.png') no-repeat center center/cover;
     text-align: center;
     color: #fff;
 }

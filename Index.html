@@ -8,7 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>JK IT Solutions</h1>
+        <div class="header-content">
+            <img src="images/jkitsolutions_logo.webp" alt="JK IT Solutions Logo" class="logo">
+            <div class="company-info">
+                <h1>JK IT Solutions</h1>
+                <p class="tagline">Innovating Your Digital Future</p>
+            </div>
+        </div>
     </header>
 
     <nav id="navbar">
@@ -21,7 +27,7 @@
     </nav>
 
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <h2>Welcome to JK IT Solutions</h2>
             <p>Your Partner in Digital Transformation</p>
             <a href="about.html" class="button">Learn More</a>
@@ -111,6 +117,16 @@
                 navbar.classList.remove("sticky");
             }
         }
+
+        // JavaScript for smooth scrolling for browsers that do not support CSS scroll-behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
