@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* General Styles */
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -10,8 +9,9 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
 header {
-    background-color: #007BFF; /* Updated background color */
+    background-color: #007BFF;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -84,13 +84,13 @@ nav ul li a:hover {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #444;
 }
 
 main {
-    padding: 100px 20px 20px; /* Added top padding to avoid content being hidden behind the fixed nav */
+    padding: 100px 20px 20px;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -102,6 +102,7 @@ main {
     color: #fff;
     padding: 0 20px;
 }
+
 
 .hero h2 {
     font-size: 3em;
@@ -135,102 +136,60 @@ main {
     transform: scale(1.05);
 }
 
-/* Features Section */
-.features {
+/* Services Section */
+.services {
     padding: 50px 20px;
     background-color: #fff;
     text-align: center;
 }
 
-.features h2 {
+.services h2 {
     font-size: 2.5em;
     margin-bottom: 1em;
     color: #333;
 }
 
-.features-grid {
+.services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.feature {
+.service {
     position: relative;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    overflow: hidden;
 }
 
-.feature::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.service img {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1;
+    height: auto;
+    border-radius: 10px 10px 0 0;
 }
 
-.feature h3, .feature p {
-    position: relative;
-    z-index: 2;
-}
-
-.feature h3 {
+.service h3 {
     font-size: 1.8em;
     margin-bottom: 0.5em;
-    color: #fff;
-    transition: color 0.3s;
+    color: #333;
 }
 
-.feature p {
+.service p {
     font-size: 1.2em;
-    color: #fff;
-    transition: color 0.3s;
+    color: #666;
 }
 
-.feature:hover {
+.service:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.6);
-}
-
-/* Background images for each feature */
-.feature:nth-child(1) {
-    background: url('images/Website_bg.webp') no-repeat center center/cover;
-}
-
-.feature:nth-child(2) {
-    background: url('images/ERP_BG.webp') no-repeat center center/cover;
-}
-
-.feature:nth-child(3) {
-    background: url('images/CRM_BG.webp') no-repeat center center/cover;
-}
-
-.feature:nth-child(4) {
-    background: url('images/Digital_bg.webp') no-repeat center center/cover;
-}
-
-.feature:nth-child(5) {
-    background: url('images/digi_manage_bg.webp') no-repeat center center/cover;
-}
-
-.feature:nth-child(6) {
-    background: url('images/IT_Coaching.webp') no-repeat center center/cover;
 }
 
 /* About Us Section */
 .about {
     padding: 50px 20px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/your-about-us-image.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-us-bg.webp') no-repeat center center/cover;
     text-align: center;
     color: #fff;
 }
@@ -336,18 +295,7 @@ main {
     margin: 0.5em 0;
 }
 
-.faq {
-    margin-top: 20px;
-}
-
-.faq-item {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px 0;
-}
-
+/* Footer Section */
 footer {
     background-color: #333;
     color: #fff;
@@ -358,7 +306,7 @@ footer {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
-    .features-grid {
+    .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -372,7 +320,7 @@ footer {
         font-size: 1.2em;
     }
 
-    .features-grid {
+    .services-grid {
         grid-template-columns: 1fr;
     }
 
